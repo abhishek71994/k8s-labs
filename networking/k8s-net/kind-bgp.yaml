@@ -1,0 +1,8 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  disableDefaultCNI: true  # Disable kindnet to use Cilium
+  kubeProxyMode: none      # Disable kube-proxy for BGP
+nodes:
+  - role: control-plane
+  - role: worker

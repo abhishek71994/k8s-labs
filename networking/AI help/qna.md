@@ -43,3 +43,22 @@ This shows that the code is focused on proxying connections rather than IP assig
 
 
 
+Looking at the code snippets provided, I don't see any direct etcd client library usage. The code shown is from `pkg/proxy/iptables/proxier.go` which is responsible for managing iptables rules for Kubernetes services and network proxying.
+
+The etcd client library would typically be used in:
+
+1. `apiserver` component (`k8s.io/apiserver`), specifically:
+   - `pkg/storage/etcd3/store.go` - handles CRUD operations to etcd
+   - `pkg/registry/generic/registry/store.go` - implements the generic storage interface
+
+2. For deployment validation and storage, the flow would be:
+   ```
+   Client (kubectl) -> API Server -> etcd
+                         |
+                         ├─> Validates request
+                         └─> Stores in etcd
+   ```
+
+Would you like me to find and show you the specific code where etcd client is used for deployment validation and storage? Let me know and I can help locate those files.
+
+
