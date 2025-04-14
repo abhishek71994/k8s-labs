@@ -59,6 +59,3 @@ The etcd client library would typically be used in:
                          └─> Stores in etcd
    ```
 
-Would you like me to find and show you the specific code where etcd client is used for deployment validation and storage? Let me know and I can help locate those files.
-
-

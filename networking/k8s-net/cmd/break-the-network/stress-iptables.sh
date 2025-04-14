@@ -14,10 +14,10 @@ check_iptables_count() {
 }
 
 # # Create cluster if not already running
-# if ! kind get clusters | grep -q "happy-path"; then
-#     kind create cluster --name happy-path --config kind-config-with-cni.yaml
-#     kubectl wait --for=condition=ready node happy-path-control-plane --timeout=60s
-# fi
+if ! kind get clusters | grep -q "happy-path"; then
+    kind create cluster --name happy-path --config kind-config-with-cni.yaml
+    kubectl wait --for=condition=ready node happy-path-control-plane --timeout=60s
+fi
 
 # Initial state
 echo -e "\n📌 Initial iptables Rule Count:"

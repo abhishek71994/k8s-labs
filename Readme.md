@@ -1,5 +1,4 @@
 # Kubernetes Experiments
-# CNCF My
 
 This repository is dedicated to Kubernetes (k8s) experiments and contains the following folders and their respective contents:
 
