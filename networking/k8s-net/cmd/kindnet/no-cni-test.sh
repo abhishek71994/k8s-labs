@@ -87,6 +87,6 @@ else
     echo -e "${RED}FAIL${NC}"
 fi
 
-# Cleanup
-echo -e "\n🧹 Cleaning up..."
-kubectl delete -f network-test.yaml --ignore-not-found
+# # Cleanup
+# echo -e "\n🧹 Cleaning up..."
+# kubectl delete -f network-test.yaml --ignore-not-found
